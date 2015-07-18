@@ -2,22 +2,16 @@
 <html>
 <head>
     <title>
-     {% if current_user.app_name %}
-                          {{ current_user.app_name  }}
-                    {% else %}
-                      Flasb
-                    {% endif %}
+     Flango
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    {%  if current_user.theme %}
-         <link href="/css/bootthemes/{{ current_user.theme }}.css" rel="stylesheet" media="screen">
-    {% else %}
+
          <link href="{{ url_for('static',filename='css/bootthemes/yeti.css') }}" rel="stylesheet" media="screen">
-    {% endif %}
+
 
     <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" media="screen">
 </head>
@@ -33,54 +27,17 @@
                 </button>
                 <a class="navbar-brand" href="/">
 
-                    {% if current_user.app_name %}
-                          {{ current_user.app_name  }}
-                    {% else %}
-                      FLASB
-                    {% endif %}
+                    Flango
 
                 </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 
-                    {% for itm in current_user.modules %}
-                         <li><a href="/{{ itm.api_name }}">{{ itm.api_name }}</a></li>
-                    {% endfor %}
 
-                   {% if current_user.is_authenticated() %}
-                    <!-- TURN OFF COMMENTS TO -->
-                   <!-- <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> nav1<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">nav1 1</a></li>
-                            <li><a href="#">nav2</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">dropdown1</a></li>
-                            <li><a href="#">dropdown2</a></li>
-                            <li><a href="#">dropdown3</a></li>
-                            <li><a href="#">dropdown4</a></li>
-                            <li><a href="#">dropdown5</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">dropdown6</li>
-                            <li><a href="#">dropdown7</a></li>
-                            <li><a href="#">dropdown8</a></li>
-                        </ul>
-                    </li>  -->
-                    {% endif %}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
-                  {% if current_user.is_authenticated() %}
-                    <li class="active"><a href="./">{{ current_user.email }}</a></li>
-                     <li><a href="/settings">Settings</a></li>
-                     <li><a href="/logout">Logout</a></li>
-                    {% endif %}
 
                 </ul>
             </div><!--/.nav-collapse -->

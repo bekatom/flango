@@ -1,6 +1,4 @@
-Starter template Flask with MongoDB & Bootstrap 
-
-![flasb](https://raw.github.com/btomashvili/flasb/master/screenshots/flasb.PNG "Starter template")
+### FLANGO
 
 To install requirements
 
