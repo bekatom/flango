@@ -1,9 +1,9 @@
 ### FLANGO
-flasb/SQLAlchmey Framework (just for testing purposes)
+Flasb/SQLAlchmey Framework (Just for testing purposes)
 
 To install requirements
 
-```python
+``` python
 pip install -r requirements.txt
 ```
 
