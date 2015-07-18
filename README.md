@@ -1,4 +1,5 @@
 ### FLANGO
+flasb/SQLAlchmey Framework (just for testing purposes)
 
 To install requirements
 
