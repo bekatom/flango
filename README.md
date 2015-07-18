@@ -1,5 +1,5 @@
 ### FLANGO
-Flasb/SQLAlchmey Framework (Just for testing purposes)
+Flasb/SQLAlchemy Framework (Just for testing purposes)
 
 To install requirements
 
